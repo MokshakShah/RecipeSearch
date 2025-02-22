@@ -8,12 +8,14 @@ const [food,setfood]=useState({});
 const[isLoading,setIsLoading]=useState(true);
 
   const URL=`https://api.spoonacular.com/recipes/${foodid}/information`;
-  const API_KEY= "Enter_your_API_KEY_here";
+  const apiKey = import.meta.env.VITE_SPOONACULAR_API_KEY;
+
 
 
 useEffect(()=>{
   async function fetchFood(){
-    const res=await fetch(`${URL}?apiKey=${API_KEY}`)
+    const res = await fetch(`${URL}?apiKey=${apiKey}`);
+
     const data= await res.json();
     console.log(data);
     setfood(data);

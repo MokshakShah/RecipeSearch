@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import styles from './search.module.css';
 
 const URL="https://api.spoonacular.com/recipes/complexSearch";
-const API_KEY= "Enter_your_API_KEY_here";
+const apiKey = import.meta.env.VITE_SPOONACULAR_API_KEY;
+
 
 
 
@@ -13,7 +14,7 @@ export default function Search({foodData,setFoodData}) {
     useEffect(() => {
       async function fetchFood() {
           try {
-              const resp = await fetch(`${URL}?query=${query}&apiKey=${API_KEY}`);
+            const resp = await fetch(`${URL}?query=${query}&apiKey=${apiKey}`);
               const data = await resp.json();
               console.log(data.results);
               setFoodData(data.results);
