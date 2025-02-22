@@ -1,0 +1,46 @@
+.itemContainer{
+    width:300px;
+    border-radius: 10px;
+    /* border:2px solid black; */
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.5);
+    margin:20px;
+    overflow:hidden;
+    font-family: poppins;
+}
+
+.itemImage{
+    max-width:100%;
+    height:auto;
+}
+
+.itemContent{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.itemName{
+    font-size: 1em;
+    font-weight: bold;
+    color:#393e46;
+}
+
+.itembtn{
+    background-color: #93f509;
+    border:none;
+    color: #fff;
+    padding:10px;
+    font-size: 16px;
+    font-weight: normal;
+    cursor:pointer;
+    border-radius:10px;
+}
+
+ 
+
+.btnContainer{
+    margin-bottom:10px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+
+}
